@@ -1,0 +1,58 @@
+:root {
+    --findit-primary: #1e5eff;
+    --findit-dark: #0b1f4d;
+}
+
+body {
+    background: #f4f6fb;
+    min-height: 100vh;
+}
+
+.navbar-findit {
+    background: var(--findit-dark);
+}
+
+.navbar-findit .navbar-brand,
+.navbar-findit .nav-link {
+    color: #fff;
+}
+
+.navbar-findit .nav-link:hover {
+    color: #9ec1ff;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--findit-dark), var(--findit-primary));
+    color: #fff;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+}
+
+.card {
+    border: 0;
+    box-shadow: 0 2px 8px rgba(11, 31, 77, 0.08);
+}
+
+.timeline {
+    list-style: none;
+    padding-left: 1rem;
+    border-left: 3px solid var(--findit-primary);
+}
+
+.timeline li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.stat-bar {
+    height: 1.25rem;
+    background: var(--findit-primary);
+    border-radius: 0.25rem;
+    min-width: 2px;
+}
+
+.status-REPORTED { background: #6c757d; }
+.status-MATCHED { background: #0dcaf0; color: #000; }
+.status-CLAIMED { background: #ffc107; color: #000; }
+.status-VERIFIED { background: #198754; }
+.status-RETURNED { background: #0b1f4d; }
