@@ -1,0 +1,32 @@
+# Render Blueprint: one Docker web service + one PostgreSQL database.
+# Auto-deploy is OFF: GitHub Actions (deploy job) triggers deploys through the deploy hook after tests pass on main.
+databases:
+  - name: findit-db
+    databaseName: findit
+    user: findit
+    plan: free
+
+services:
+  - type: web
+    name: findit
+    runtime: docker
+    plan: free
+    autoDeploy: false
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: findit-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRATION_MS
+        value: "86400000"
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SECURITY_EMAIL
+        sync: false
+      - key: SECURITY_PASSWORD
+        sync: false
