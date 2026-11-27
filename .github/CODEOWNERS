@@ -1,0 +1,21 @@
+# PLACEHOLDER USERNAMES - replace member-a / member-b / member-c with the real GitHub usernames of your team.
+# Member A: auth, user, admin, common, security config, Docker
+/src/main/java/com/findit/auth/          @member-a
+/src/main/java/com/findit/user/          @member-a
+/src/main/java/com/findit/admin/         @member-a
+/src/main/java/com/findit/common/        @member-a
+/src/main/java/com/findit/config/        @member-a
+/Dockerfile                              @member-a
+/docker-compose.yml                      @member-a
+
+# Member B: item, category, search, CI
+/src/main/java/com/findit/item/          @member-b
+/src/main/java/com/findit/category/      @member-b
+/.github/workflows/                      @member-b
+
+# Member C: match, claim, notification, Render, README
+/src/main/java/com/findit/match/         @member-c
+/src/main/java/com/findit/claim/         @member-c
+/src/main/java/com/findit/notification/  @member-c
+/render.yaml                             @member-c
+/README.md                               @member-c

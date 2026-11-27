@@ -1,0 +1,22 @@
+# Test profile: in-memory H2 in PostgreSQL mode. Values below are throw-away TEST values only.
+spring:
+  datasource:
+    url: jdbc:h2:mem:findit;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+findit:
+  jwt:
+    secret: test-only-jwt-secret-value-that-is-at-least-32-bytes-long
+    expiration-ms: 3600000
+  stats:
+    cache-ttl-seconds: 0
+  seed:
+    admin-email: admin@test.local
+    admin-password: TestAdminPw#1
+    security-email: security@test.local
+    security-password: TestSecurityPw#1
